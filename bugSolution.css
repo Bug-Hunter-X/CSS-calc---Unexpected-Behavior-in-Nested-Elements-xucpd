@@ -1,0 +1,18 @@
+/* bugSolution.css */
+.container {
+  width: 80%; /* Example width */
+  border: 1px solid black;
+}
+
+.inner {
+  width: calc(100% - 100px); /* Explicitly use 100px instead of 50px to make the problem more visible */
+  background-color: lightblue;
+  /* Now it calculates 100% relative to the container's width */
+  box-sizing: border-box; /* To avoid border issues */
+}
+
+/* Avoid the following problematic approach in nested context */
+/*.inner {
+  width: calc(100% - 50px); /* This might lead to unexpected results */
+  background-color: lightblue;
+}*/
